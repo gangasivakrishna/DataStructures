@@ -1,22 +1,7 @@
-"""
-Problem : Single Linked List
-
-Descritpin: Single LinkedList Operations
-
-Author : Siva Krishna
-
-Date : 21-09-2018
-
-"""
-
-
-#LinkedList Node Creation
-
-"""Linked list node has two fields  one is data and another one is next
-
-next is ponted to the next node,initially it is None"""
 
 import sys
+
+#LinkedList Insertion operations
 
 class Node:
 
@@ -33,8 +18,7 @@ class LinkedList:
 
 		self.head = None
 
-
-	#adding elements to the linked list
+		#adding elements to the linked list
 
 	# 1. Create a Node
 	# 2. Check whether head is empty,if empty assign created Node to head
@@ -134,55 +118,6 @@ class LinkedList:
 
 			return flag
 
-	def delete(self,key):
-
-		flag = False
-
-		temp = self.head
-
-		if self.head is None:
-
-			print("LinkedList empty!!")
-
-		elif self.head.data == key:
-
-			self.head = temp.next
-
-			return True
-
-		else:
-
-			while(temp.next):
-
-				if temp.next.data == key:
-
-					temp.next = temp.next.next
-
-					flag = True
-
-					return flag
-
-				temp = temp.next
-
-			return flag
-
-
-	def deleteLinkedList(self):
-
-
-		if self.head:
-
-			self.head = None
-
-			print("LinkedList deleted!!")
-
-		else:
-
-			print("Linkedlist already empty!!")
-
-
-
-
 	# Display Linkedlist items
 
 	def traversal(self):
@@ -208,9 +143,8 @@ class LinkedList:
 
 
 
-
-
 if __name__ == '__main__':
+	
 
 	#LinkedList object instance creation
 
@@ -220,7 +154,7 @@ if __name__ == '__main__':
 
 		print()
 		
-		print("1 Append 2 InsertBefore 3 InsertAfter 4 Display 5 DeleteNode 6 DeleteLinkedlist")
+		print("1 Inesrt at End 2 InsertBefore 3 InsertAfter 4 Display")
 
 		print()
 
@@ -270,26 +204,6 @@ if __name__ == '__main__':
 
 			ll.traversal()
 
-		elif (ch == 5):
-
-			key = input("Enter Node to Delete : ")
-
-			deleteStatus = ll.delete(key)
-
-			if deleteStatus:
-
-				print("Node deleted !!")
-
-			else:
-
-				print("Node deletion failed!!")
-
-
-		elif(ch == 6):
-
-			ll.deleteLinkedList()
-
 		else:
 
 			sys.exit(0)
-
