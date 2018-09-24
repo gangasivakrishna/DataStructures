@@ -182,7 +182,6 @@ class LinkedList:
 
 
 
-
 	# Display Linkedlist items
 
 	def traversal(self):
@@ -220,7 +219,7 @@ if __name__ == '__main__':
 
 		print()
 		
-		print("1 Append 2 InsertBefore 3 InsertAfter 4 Display 5 DeleteNode 6 DeleteLinkedlist")
+		print("1 Append 2 InsertBefore 3 InsertAfter 4 Display 5 DeleteNode 6 DeleteLinkedlist ")
 
 		print()
 
