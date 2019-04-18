@@ -28,6 +28,11 @@ it come out from the infinite loop
 and then assign temp value to arr[j] 
 now j value is 5 ..so it assigns temp value to 5th index
 finally the rotated array is 3,4,5,6,7,1,2
+
+Why GCD?
+inner loop increments in steps of d and stops when it get backs to starting point
+a total span which is some multiple of n the multiple is LCM(n,d). Thus the no.of elements in cycle is LCM(n,d)/d
+the total number of such cycles is (n/LCM(n,d)/d) which is equals to GCD(n,d)
 """
 
 def rotateArray(arr, d, n):
